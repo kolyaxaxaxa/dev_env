@@ -4,11 +4,8 @@ from django.http import HttpResponse
 
 def index(request):
     context = {
-        'title': 'Главная',
-        'content': 'Главная страница магазина',
-        'prods': {'sku': 1001, 'name': 'Мясорубка Tefal TF 4501', 'price': 4990},
-        'list': [True, 125, 'Товар'],
-        'bool': False
+        'title': 'Home - Главная',
+        'content': 'Магазин мебели HOME',
     }
     return render(request, 'main/index.html', context=context)
 
