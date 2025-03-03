@@ -11,4 +11,9 @@ def index(request):
 
 
 def about(request):
-    return HttpResponse('О нас')
+    context = {
+        'title': 'Home - О нас',
+        'content': 'Информация о магазине',
+        'text_on_page': 'Текст о том какой классный этот интернет магазин.'
+    }
+    return render(request, 'main/about.html', context=context)
